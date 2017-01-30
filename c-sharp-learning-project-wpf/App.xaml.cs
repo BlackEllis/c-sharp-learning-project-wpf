@@ -13,5 +13,12 @@ namespace c_sharp_learning_project_wpf
     /// </summary>
     public partial class App : Application
     {
+        private void Application_Startup(Object sender, StartupEventArgs e)
+        {
+            foreach (String arg in e.Args)
+            {
+                Console.WriteLine(arg.ToString());
+            }
+        }
     }
 }
