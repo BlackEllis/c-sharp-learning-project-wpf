@@ -17,6 +17,10 @@ namespace c_sharp_learning_project_wpf
     {
         public static string[] Args { get; set; }
 
+        /// <summary>
+        /// アプリケーションが開始される時のイベント
+        /// </summary>
+        /// <param name="e"></param>
         protected override void OnStartup(StartupEventArgs e)
         {
             base.OnStartup(e);
@@ -26,6 +30,15 @@ namespace c_sharp_learning_project_wpf
 
             w.DataContext = vm;
             w.Show();
+        }
+
+        /// <summary>
+        /// アプリケーションが終了する時のイベント
+        /// </summary>
+        /// <param name="args"></param>
+        protected override void OnExit(ExitEventArgs e)
+        {
+            base.OnExit(e);
         }
 
         [STAThread]
