@@ -13,27 +13,19 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace c_sharp_learning_project_wpf
+namespace c_sharp_learning_project_wpf.ViewModels
 {
-    /// <summary>
-    /// MainWindow.xaml の相互作用ロジック
-    /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainViewModel : Window
     {
-        public MainWindow()
+        public MainViewModel()
         {
             InitializeComponent();
+
+        }
+
+        private void InitializeComponent()
+        {
             
-        }
-
-        private void process_button_Click(object sender, RoutedEventArgs e)
-        {
-            log_area.Text += (in_text.Text+"\n");
-        }
-
-        private void close_button_Click(object sender, RoutedEventArgs e)
-        {
-            this.Close();
         }
     }
 }
