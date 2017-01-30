@@ -17,15 +17,5 @@ namespace c_sharp_learning_project_wpf.ViewModels
 {
     public partial class MainViewModel : Window
     {
-        public MainViewModel()
-        {
-            InitializeComponent();
-
-        }
-
-        private void InitializeComponent()
-        {
-            
-        }
     }
 }
