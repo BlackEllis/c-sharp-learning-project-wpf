@@ -7,7 +7,10 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        <Button x:Name="button" Content="Hello World!!" HorizontalAlignment="Left" Margin="220,150,0,0" VerticalAlignment="Top" Width="75" Click="button_Click"/>
-
+        <TextBlock x:Name="in_textblock" HorizontalAlignment="Left" Margin="40,25,0,0" TextWrapping="Wrap" Text="add log" VerticalAlignment="Top"/>
+        <TextBox x:Name="in_text" HorizontalAlignment="Left" Height="23" Margin="94,20,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="log_area" HorizontalAlignment="Left" Height="145" Margin="10,144,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="497" IsReadOnlyCaretVisible="True" VerticalScrollBarVisibility="Auto"/>
+        <Button x:Name="process_button" Content="Process" HorizontalAlignment="Left" Margin="340,294,0,0" VerticalAlignment="Top" Width="75" Click="process_button_Click"/>
+        <Button x:Name="close_button" Content="Close" HorizontalAlignment="Left" Margin="432,294,0,0" VerticalAlignment="Top" Width="75" Click="close_button_Click"/>
     </Grid>
 </Window>

@@ -23,11 +23,17 @@ namespace c_sharp_learning_project_wpf
         public MainWindow()
         {
             InitializeComponent();
+            
         }
 
-        private void button_Click(object sender, RoutedEventArgs e)
+        private void process_button_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Hello world!!");
+            log_area.Text += (in_text.Text+"\n");
+        }
+
+        private void close_button_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }
