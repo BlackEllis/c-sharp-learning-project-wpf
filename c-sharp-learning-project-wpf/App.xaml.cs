@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
+using c_sharp_learning_project_wpf.Models;
 using c_sharp_learning_project_wpf.ViewModels;
 using c_sharp_learning_project_wpf.Views;
 
@@ -15,7 +16,7 @@ namespace c_sharp_learning_project_wpf
     /// </summary>
     public partial class App : Application
     {
-        public static string[] Args { get; set; }
+        public static Dictionary<string, string> Args { get; set; }
 
         /// <summary>
         /// アプリケーションが開始される時のイベント
@@ -44,7 +45,7 @@ namespace c_sharp_learning_project_wpf
         [STAThread]
         public static void Main(string[] args)
         {
-            Args = args;
+            Args = Utility.argument_parser(args);
 
             var app = new App();
             app.InitializeComponent();
