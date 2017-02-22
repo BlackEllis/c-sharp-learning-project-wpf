@@ -23,5 +23,11 @@ namespace c_sharp_learning_project_wpf.Views
         {
             InitializeComponent();
         }
+
+        private ViewModels.MainViewModel VM { get { return this.DataContext as ViewModels.MainViewModel; } }
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            this.VM.add_log("ホゲホゲ");
+        }
     }
 }

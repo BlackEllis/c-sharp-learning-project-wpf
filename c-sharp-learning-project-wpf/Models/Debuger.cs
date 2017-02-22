@@ -1,15 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace c_sharp_learning_project_wpf.Models
 {
-    class Debuger
+    class Debuger : INotifyPropertyChanged
     {
-        private Queue<string> log_buffer;
-        
         public static void Write_Console<T>(T src)
         {
 #if DEBUG
@@ -17,11 +17,7 @@ namespace c_sharp_learning_project_wpf.Models
 #endif 
         }
 
-        public Queue<string> get_log_buffer()
-        {
-            return log_buffer;
-        }
-
+        public Queue<string> log_buffer { get; set; }
         public string get_log_str()
         {
             string dst_log = "";
@@ -29,6 +25,13 @@ namespace c_sharp_learning_project_wpf.Models
                 dst_log += (str + "\n");
 
             return dst_log;
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        private void NotifyPropertyChanged([CallerMemberName]string property_name = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(property_name));
         }
     }
 }

@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:c_sharp_learning_project_wpf.Views"
         mc:Ignorable="d"
-        Title="DebugLogView" Height="260" Width="480">
+        Title="DebugLogView" Height="270" Width="490">
     <Grid>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="213" TextWrapping="Wrap" VerticalAlignment="Top" Width="452" Margin="10,10,0,0"/>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="220" TextWrapping="Wrap" VerticalAlignment="Top" Width="460" Margin="10,10,0,0" Text="{Binding log_text}"/>
 
     </Grid>
 </Window>

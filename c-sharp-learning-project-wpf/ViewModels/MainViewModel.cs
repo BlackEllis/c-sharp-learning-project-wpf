@@ -1,21 +1,27 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
+﻿using c_sharp_learning_project_wpf.Views;
+using System.ComponentModel;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace c_sharp_learning_project_wpf.ViewModels
 {
-    public partial class MainViewModel : Window
+    public partial class MainViewModel : INotifyPropertyChanged
     {
+        DebugLogView dw = default(DebugLogView);
+        DebuglogViewModel dvm = default(DebuglogViewModel);
+
+        public event PropertyChangedEventHandler PropertyChanged;
+        public void add_log(string str)
+        {
+            dvm.log_text += str;
+        }
+
+        public MainViewModel()
+        {
+            dw = new DebugLogView();
+            dvm = new DebuglogViewModel();
+
+            dw.DataContext = dvm;
+            dw.Show();
+        }
     }
 }
