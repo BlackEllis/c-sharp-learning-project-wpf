@@ -1,16 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using c_sharp_learning_project_wpf.Models;
+using c_sharp_learning_project_wpf.ViewModels;
+using System.Collections.ObjectModel;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace c_sharp_learning_project_wpf.Views
 {
@@ -19,9 +10,12 @@ namespace c_sharp_learning_project_wpf.Views
     /// </summary>
     public partial class DebugLogView : Window
     {
+        private readonly DebuglogViewModel _debuger_vm;
+
         public DebugLogView()
         {
             InitializeComponent();
         }
+        
     }
 }

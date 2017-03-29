@@ -1,37 +1,38 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace c_sharp_learning_project_wpf.Models
 {
-    class Debuger : INotifyPropertyChanged
+    class Debuger
     {
-        public static void Write_Console<T>(T src)
+        private List<string> _log_texts;
+
+        public Debuger()
         {
-#if DEBUG
-            Console.WriteLine(src.ToString());
-#endif 
+            if (_log_texts != null) return;
+            _log_texts = new List<string>();
         }
 
-        public Queue<string> log_buffer { get; set; }
-        public string get_log_str()
+        public string log_text
         {
-            string dst_log = "";
-            foreach (string str in log_buffer)
-                dst_log += (str + "\n");
-
-            return dst_log;
+            set
+            {
+                _log_texts.Add(value);
+            }
+            get
+            {
+                if ((log_texts == null) || (log_texts.Count == 0)) return null;
+                return log_texts.Last();
+            }
         }
 
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        private void NotifyPropertyChanged([CallerMemberName]string property_name = null)
+        public List<string> log_texts
         {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(property_name));
+            get
+            {
+                return new List<string>(_log_texts);
+            }
         }
     }
 }

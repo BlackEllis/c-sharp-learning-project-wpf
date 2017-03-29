@@ -6,8 +6,9 @@
         xmlns:local="clr-namespace:c_sharp_learning_project_wpf.Views"
         mc:Ignorable="d"
         Title="DebugLogView" Height="270" Width="490">
+   
     <Grid>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="220" TextWrapping="Wrap" VerticalAlignment="Top" Width="460" Margin="10,10,0,0" Text="{Binding log_text}"/>
-
+        <ListBox x:Name="log_box" HorizontalAlignment="Left" Height="225" Margin="10,10,0,0" VerticalAlignment="Top" Width="460" DisplayMemberPath="" ItemsSource="{Binding log_text}"/>
+            
     </Grid>
 </Window>
