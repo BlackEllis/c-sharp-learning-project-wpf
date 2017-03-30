@@ -1,7 +1,6 @@
 ﻿using c_sharp_learning_project_wpf.Views;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Windows.Input;
 
 namespace c_sharp_learning_project_wpf.ViewModels
 {

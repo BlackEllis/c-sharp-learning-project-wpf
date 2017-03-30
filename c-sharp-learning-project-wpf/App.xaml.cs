@@ -1,9 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Configuration;
-using System.Data;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows;
 using c_sharp_learning_project_wpf.Models;
 using c_sharp_learning_project_wpf.ViewModels;

@@ -1,13 +1,6 @@
 ﻿using c_sharp_learning_project_wpf.Models;
-using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.ComponentModel;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
 
 namespace c_sharp_learning_project_wpf.ViewModels
 {
@@ -19,18 +12,7 @@ namespace c_sharp_learning_project_wpf.ViewModels
         public DebuglogViewModel()
         {
             debug_model = new Debuger();
-            //obj = new ObservableCollection<Debuger>() { debug_model };
         }
-
-        //public string log_text
-        //{
-        //    set
-        //    {
-        //        if (value.Equals("")) return;
-        //        debug_model.log_text = value;
-        //    }
-        //    get { return debug_model.log_text; }
-        //}
 
         public List<string> log_text
         {
@@ -45,7 +27,7 @@ namespace c_sharp_learning_project_wpf.ViewModels
             }
             get
             {
-                return debug_model.log_texts;
+                return new List<string>(debug_model.log_texts);
             }
         }
     }

@@ -9,6 +9,5 @@
    
     <Grid>
         <ListBox x:Name="log_box" HorizontalAlignment="Left" Height="225" Margin="10,10,0,0" VerticalAlignment="Top" Width="460" DisplayMemberPath="" ItemsSource="{Binding log_text}"/>
-            
     </Grid>
 </Window>
